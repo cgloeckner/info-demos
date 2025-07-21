@@ -3,7 +3,7 @@ import sys
 import tkinter as tk
 
 from maze import *
-from shared.grid import TkGrid
+from shared.grid import TkGrid, TkShape
 
 
 class MazeDrawer(TkGrid):
@@ -30,7 +30,7 @@ class MazeDrawer(TkGrid):
     
     def __call__(self) -> None:
         """Zeichnet und delayt ggf."""
-        self.render(self.__maze.fields)
+        self.draw_shapes(self.__maze.fields, shape=TkShape.RECTANGLE)
 
         if self.__delay > 0:
             time.sleep(self.__delay / 1000.0)
