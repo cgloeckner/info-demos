@@ -18,14 +18,14 @@ class MazeDrawer(TkGrid):
         """Bestimmt Farbe eines Pixels"""
         if data.type_ == FieldType.WAY:
             if data.visited:
-                return 'orange'
-            return 'white'
+                return '#FFAA00'
+            return '#FFFFFF'
         if data.type_ == FieldType.WALL:
-            return 'black'
+            return '#000000'
         if data.type_ == FieldType.START:
-            return 'blue'
+            return '#0000FF'
         if data.type_ == FieldType.FINISH:
-            return 'red'
+            return '#FF0000'
         raise ValueError(data)
     
     def __call__(self) -> None:
