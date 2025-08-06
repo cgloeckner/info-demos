@@ -1,3 +1,5 @@
+#!/bin/python3
+
 import sys
 
 def is_operator(symbol: str) -> bool:
